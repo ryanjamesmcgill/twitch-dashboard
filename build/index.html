@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1" />
+    <title>Twitch Dashboard</title>
+    <!-- stylesheets -->
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/starter-template.css">
+    <link rel="stylesheet" href="./css/twitch-dashboard.css">
+    <!--fancy font: <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="react-application">
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-12" style="display: flex">
+          <div class="loader" style="margin: 0 auto"></div>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+  </body>
+    <!-- Bootstrap and Jquery -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- worklist-generator.js -->
+    <script src="./js/twitch-dashboard.js"></script>
+    
+    <script>
+    /*global $*/
+    $(document).ready(function(){
+      $("[data-toggle=popover]").popover({
+        html: true, 
+	      content: function() {
+          return $('#popover-content').html();
+        }
+      });
+    });
+    </script>
+</html>
+
+
+
+
+
